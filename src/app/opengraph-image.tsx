@@ -20,6 +20,7 @@ export default function OGImage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+          alignItems: 'center',
           padding: '80px',
           color: 'white',
           fontFamily: 'Inter, system-ui, sans-serif',
@@ -50,6 +51,7 @@ export default function OGImage() {
             fontSize: 28,
             marginTop: 12,
             opacity: 0.85,
+            textAlign: 'center',
           }}
         >
           React • Next.js • Node.js — Dakar 🇸🇳
@@ -67,6 +69,19 @@ export default function OGImage() {
         >
           Open to Work
         </div>
+
+        <img
+          src="https://res.cloudinary.com/dgro5x4h8/image/upload/v1735669947/file_mji96e.jpg"
+          alt="Idrissa Wade"
+          style={{
+            borderRadius: '50%',
+            width: 120,
+            height: 120,
+            marginTop: 60,
+            objectFit: 'cover',
+            border: '3px solid #00ff88',
+          }}
+        />
       </div>
     ),
     size

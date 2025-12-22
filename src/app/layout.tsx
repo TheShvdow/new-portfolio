@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Idy Portfolio',
     images: [
       {
-        url: 'https://idrisswade.vercel.app/opengraph-image', // à mettre dans /public
+        url: '/og-image.png', // à mettre dans /public
         width: 1200,
         height: 630,
         alt: 'Idy - Fullstack Developer',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Idy | Fullstack Developer',
     description:
       'Développeur Fullstack spécialisé en React, Next.js et Node.js.',
-    images: ['/opengraph-image'],
+    images: ['/og-image.png'],
     creator: '@theShvdow', // optionnel
   },
 
