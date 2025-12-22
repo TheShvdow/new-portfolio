@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Idy Portfolio',
     images: [
       {
-        url: '/og-image.png', // à mettre dans /public
+        url: 'https://idrisswade.vercel.app/og-image.png', // à mettre dans /public
         width: 1200,
         height: 630,
         alt: 'Idy - Fullstack Developer',
