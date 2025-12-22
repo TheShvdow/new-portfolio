@@ -94,32 +94,32 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-32 md:py-40 px-6 md:px-12 relative overflow-hidden"
+      className="py-20 md:py-32 lg:py-40 px-4 md:px-6 lg:px-12 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-20">
-          <p className="section-label font-mono text-sm text-accent tracking-[0.3em] uppercase mb-4">
+        <div className="mb-12 md:mb-16 lg:mb-20">
+          <p className="section-label font-mono text-xs md:text-sm text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4">
             À propos
           </p>
           <h2
             ref={titleRef}
-            className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold tracking-tight"
+            className="font-display text-[clamp(2rem,6vw,5rem)] font-extrabold tracking-tight"
           >
             Qui suis-je ?
           </h2>
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-center">
           {/* Text Content */}
           <div>
-            <div className="space-y-6 mb-12">
+            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
               <p
                 ref={(el) => {
                   if (el) textRefs.current[0] = el;
                 }}
-                className="text-lg text-[#888] leading-relaxed"
+                className="text-base md:text-lg text-[#888] leading-relaxed"
               >
                 <strong className="text-white">
                   Développeur Fullstack Mid-Junior
@@ -133,7 +133,7 @@ export default function About() {
                 ref={(el) => {
                   if (el) textRefs.current[1] = el;
                 }}
-                className="text-lg text-[#888] leading-relaxed"
+                className="text-base md:text-lg text-[#888] leading-relaxed"
               >
                 J&apos;ai conçu et développé des systèmes critiques de gestion
                 comme le <strong className="text-white">GDR</strong> (Gestion
@@ -146,7 +146,7 @@ export default function About() {
                 ref={(el) => {
                   if (el) textRefs.current[2] = el;
                 }}
-                className="text-lg text-[#888] leading-relaxed"
+                className="text-base md:text-lg text-[#888] leading-relaxed"
               >
                 Passionné par les technologies modernes, je maîtrise
                 l&apos;écosystème{" "}
@@ -158,17 +158,17 @@ export default function About() {
             </div>
 
             {/* Stats */}
-            <div ref={statsRef} className="grid grid-cols-2 gap-6">
+            <div ref={statsRef} className="grid grid-cols-2 gap-3 md:gap-6">
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="p-6 bg-secondary rounded-2xl border border-white/5 hover:border-accent/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,255,136,0.1)] magnetic"
+                  className="p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-white/5 hover:border-accent/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,255,136,0.1)] magnetic"
                   data-cursor={stat.label}
                 >
-                  <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text">
+                  <div className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold gradient-text">
                     {stat.number}
                   </div>
-                  <div className="font-mono text-xs text-[#666] uppercase tracking-wider mt-2">
+                  <div className="font-mono text-[10px] md:text-xs text-[#666] uppercase tracking-wider mt-1 md:mt-2">
                     {stat.label}
                   </div>
                 </div>
@@ -177,8 +177,8 @@ export default function About() {
           </div>
 
           {/* Image */}
-          <div ref={imageRef} className="relative">
-            <div className="animated-border rounded-3xl aspect-[4/5] relative overflow-hidden">
+          <div ref={imageRef} className="relative mt-8 lg:mt-0">
+            <div className="animated-border rounded-2xl md:rounded-3xl aspect-[4/5] relative overflow-hidden">
               {/* IMAGE */}
               <div className="absolute inset-0 z-[1]">
                 <Image
@@ -204,11 +204,11 @@ export default function About() {
               />
 
               {/* TEXTE SUR IMAGE */}
-              <div className="absolute bottom-6 left-6 z-[3]">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent mb-1">
+              <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 z-[3]">
+                <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-accent mb-1">
                   Fullstack Developer
                 </p>
-                <h3 className="font-display text-2xl font-bold text-white">
+                <h3 className="font-display text-xl md:text-2xl font-bold text-white">
                   Idriss Wade
                 </h3>
               </div>
@@ -216,20 +216,20 @@ export default function About() {
               {/* BADGE OPEN TO WORK */}
               <div
                 className="
-                  absolute top-6 right-6
+                  absolute top-4 md:top-6 right-4 md:right-6
                   z-[3]
                   bg-primary/90 backdrop-blur
                   border border-white/10
-                  rounded-2xl
-                  px-4 py-2
+                  rounded-xl md:rounded-2xl
+                  px-3 py-1.5 md:px-4 md:py-2
                   shadow-2xl
                   floating
                 "
               >
-                <div className="font-mono text-[10px] text-accent uppercase tracking-wider">
+                <div className="font-mono text-[9px] md:text-[10px] text-accent uppercase tracking-wider">
                   Status
                 </div>
-                <div className="font-display text-sm font-bold text-white">
+                <div className="font-display text-xs md:text-sm font-bold text-white">
                   Open to Work
                 </div>
               </div>

@@ -155,28 +155,28 @@ export default function Projects() {
     <section
       ref={sectionRef}
       id="projects"
-      className="py-32 md:py-40 px-6 md:px-12 relative overflow-hidden"
+      className="py-20 md:py-32 lg:py-40 px-4 md:px-6 lg:px-12 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-20">
-          <p className="section-label font-mono text-sm text-accent tracking-[0.3em] uppercase mb-4">
+        <div className="mb-12 md:mb-16 lg:mb-20">
+          <p className="section-label font-mono text-xs md:text-sm text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-4">
             Portfolio
           </p>
-          <h2 className="section-title font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold tracking-tight">
+          <h2 className="section-title font-display text-[clamp(2rem,6vw,5rem)] font-extrabold tracking-tight">
             Projets sélectionnés
           </h2>
         </div>
 
         {/* Projects */}
-        <div className="space-y-32 md:space-y-40">
+        <div className="space-y-20 md:space-y-32 lg:space-y-40">
           {projects.map((project, idx) => (
             <div
               key={idx}
               ref={(el) => {
                 if (el) projectsRef.current[idx] = el;
               }}
-              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+              className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center ${
                 idx % 2 === 1 ? "lg:direction-rtl" : ""
               }`}
               style={{ direction: idx % 2 === 1 ? "rtl" : "ltr" }}
@@ -189,7 +189,7 @@ export default function Projects() {
                 <div
                   className="
                     relative
-                    rounded-3xl
+                    rounded-2xl md:rounded-3xl
                     overflow-hidden
                     aspect-video
                     bg-secondary
@@ -211,7 +211,7 @@ export default function Projects() {
                     <span
                       className="
                       font-display
-                      text-[clamp(4rem,10vw,10rem)]
+                      text-[clamp(3rem,8vw,10rem)]
                       font-extrabold
                       text-white/10
                       leading-none
@@ -258,26 +258,26 @@ export default function Projects() {
               {/* Content */}
               <div className="project-content" style={{ direction: "ltr" }}>
                 <div
-                  className="font-display text-7xl md:text-8xl font-extrabold text-transparent mb-4"
+                  className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent mb-3 md:mb-4"
                   style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
                 >
                   {project.number}
                 </div>
 
-                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 tracking-tight">
                   {project.title}
                 </h3>
 
-                <p className="text-[#888] leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-[#888] leading-relaxed mb-4 md:mb-6">
                   {project.description}
                 </p>
 
                 {/* Tech stack */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
                   {project.tech.map((tech, techIdx) => (
                     <span
                       key={techIdx}
-                      className="px-4 py-2 bg-accent/10 rounded-full font-mono text-xs text-accent"
+                      className="px-3 md:px-4 py-1.5 md:py-2 bg-accent/10 rounded-full font-mono text-[10px] md:text-xs text-accent"
                     >
                       {tech}
                     </span>
@@ -285,13 +285,13 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                   {project.links.live && (
                     <a
                       href={project.links.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary text-sm magnetic"
+                      className="btn-primary text-xs md:text-sm magnetic text-center"
                       data-cursor="Voir"
                     >
                       Voir le projet →
@@ -301,14 +301,15 @@ export default function Projects() {
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-secondary text-sm magnetic flex items-center gap-2"
+                    className="btn-secondary text-xs md:text-sm magnetic flex items-center justify-center gap-2"
                     data-cursor="GitHub"
                   >
                     <svg
-                      width="16"
-                      height="16"
+                      width="14"
+                      height="14"
                       viewBox="0 0 24 24"
                       fill="currentColor"
+                      className="md:w-4 md:h-4"
                     >
                       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                     </svg>

@@ -27,19 +27,19 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer 
+    <footer
       ref={footerRef}
-      className="px-6 md:px-12 py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+      className="px-4 md:px-6 lg:px-12 py-6 md:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4"
     >
-      <div className="font-mono text-sm text-[#666]">
+      <div className="font-mono text-xs md:text-sm text-[#666] text-center md:text-left">
         © {new Date().getFullYear()} TheShvdow. Tous droits réservés.
       </div>
-      
-      <div className="font-mono text-sm text-[#666]">
+
+      <div className="font-mono text-xs md:text-sm text-[#666] text-center md:text-left">
         Construit avec ❤️ et{' '}
-        <a 
-          href="https://nextjs.org" 
-          target="_blank" 
+        <a
+          href="https://nextjs.org"
+          target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >

@@ -59,9 +59,11 @@ export default function Home() {
       {/* Page Transition */}
       {!isLoading && <PageTransition />}
 
+      {/* Navbar - Always visible after loader */}
+      {!isLoading && <Navbar />}
+
       {/* Main Content */}
       <div style={{ visibility: showContent ? 'visible' : 'hidden' }}>
-        <Navbar />
         <Hero />
         <Marquee />
         <About />
@@ -72,7 +74,7 @@ export default function Home() {
       </div>
 
       {/* Noise overlay */}
-      <div className="noise fixed inset-0 pointer-events-none z-[100]" />
+      <div className="noise fixed inset-0 pointer-events-none z-[40]" />
     </main>
   )
 }

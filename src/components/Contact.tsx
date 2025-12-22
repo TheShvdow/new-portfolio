@@ -116,10 +116,10 @@ export default function Contact() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="contact" 
-      className="py-32 md:py-40 px-6 md:px-12 bg-secondary text-center relative overflow-hidden"
+      id="contact"
+      className="py-20 md:py-32 lg:py-40 px-4 md:px-6 lg:px-12 bg-secondary text-center relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -127,28 +127,28 @@ export default function Contact() {
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <p className="font-mono text-sm text-accent tracking-[0.3em] uppercase mb-6">
+        <p className="font-mono text-xs md:text-sm text-accent tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6">
           Contact
         </p>
 
-        <h2 
+        <h2
           ref={titleRef}
-          className="font-display text-[clamp(3rem,10vw,8rem)] font-extrabold tracking-tight leading-[0.95] mb-8"
+          className="font-display text-[clamp(2rem,8vw,6rem)] font-extrabold tracking-tight leading-[1] md:leading-[0.95] mb-6 md:mb-8 px-2"
           style={{ perspective: '1000px' }}
         >
           <span className="word inline-block">Travaillons</span>{' '}
           <span className="word inline-block gradient-text">ensemble</span>
         </h2>
 
-        <p className="subtitle text-xl text-[#888] max-w-md mx-auto mb-12">
-          Vous avez un projet en tête ou une opportunité à proposer ? 
+        <p className="subtitle text-base md:text-xl text-[#888] max-w-md mx-auto mb-8 md:mb-12 px-4">
+          Vous avez un projet en tête ou une opportunité à proposer ?
           N&apos;hésitez pas à me contacter !
         </p>
 
-        <a 
+        <a
           ref={emailRef}
-          href="mailto:derisswvde@gmail.com" 
-          className="inline-block font-display text-2xl md:text-4xl font-semibold relative group magnetic"
+          href="mailto:derisswvde@gmail.com"
+          className="inline-block font-display text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold relative group magnetic break-all px-4"
           data-cursor="Email"
         >
           <span className="relative z-10">derisswvde@gmail.com</span>
@@ -156,14 +156,14 @@ export default function Contact() {
         </a>
 
         {/* Socials */}
-        <div ref={socialsRef} className="flex justify-center gap-5 mt-14">
+        <div ref={socialsRef} className="flex justify-center gap-4 md:gap-5 mt-10 md:mt-14">
           {socials.map((social, idx) => (
             <a
               key={idx}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-14 h-14 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:text-primary transition-all duration-300 hover:-translate-y-2 magnetic"
+              className="w-12 h-12 md:w-14 md:h-14 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:text-primary transition-all duration-300 hover:-translate-y-2 magnetic"
               data-cursor={social.name}
             >
               {social.icon}
