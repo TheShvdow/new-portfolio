@@ -148,12 +148,12 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full pt-20">
-        <p
+        <h1
           ref={subtitleRef}
           className="font-mono text-xs sm:text-sm text-accent tracking-[0.15em] sm:tracking-[0.3em] uppercase mb-4 md:mb-6 py-4 md:py-8"
         >
           Fullstack Developer • Dakar, Sénégal
-        </p>
+        </h1>
 
         <h1 className="font-display font-extrabold leading-[1] md:leading-[0.95] lg:leading-[0.9] tracking-tight mb-6 md:mb-8 -mx-2" style={{ perspective: '1000px' }}>
           <div ref={titleLine1Ref} className="overflow-hidden">

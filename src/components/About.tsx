@@ -183,7 +183,7 @@ export default function About() {
               <div className="absolute inset-0 z-[1]">
                 <Image
                   src="/photo.jpeg"
-                  alt="Idy - Fullstack Developer"
+                  alt="Idrissa Wade développeur fullstack basé à Daka"
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"

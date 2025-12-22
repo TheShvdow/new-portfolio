@@ -78,3 +78,28 @@ export default function Home() {
     </main>
   )
 }
+
+
+
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Idrissa Wade",
+      jobTitle: "Développeur Fullstack",
+      url: "https://idrisswade.vercel.app",
+      sameAs: [
+        "https://github.com/TheShvdow",
+        "https://linkedin.com/in/idrissawade",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dakar",
+        addressCountry: "SN",
+      },
+    }),
+  }}
+/>

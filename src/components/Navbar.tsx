@@ -88,6 +88,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
+      aria-label='Navigation Principale'
       className={`fixed top-0 left-0 w-full z-[9999] px-4 md:px-6 lg:px-12 py-4 md:py-6 flex justify-between items-center transition-all duration-500 ${
         isScrolled
           ? 'bg-primary/95 backdrop-blur-lg shadow-lg'
@@ -110,6 +111,7 @@ export default function Navbar() {
             <button
               onClick={() => scrollTo(item)}
               className="font-mono text-xs lg:text-sm uppercase tracking-widest relative group magnetic text-white/80 hover:text-white"
+              aria-label='Aller à la section du menu'
             >
               {item === 'about'
                 ? 'À propos'
