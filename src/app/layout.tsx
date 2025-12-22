@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://idrisswade.vercel.app'),
+  metadataBase: new URL('https://idrissawade.vercel.app'),
 
   title: {
     default: 'Idy | Fullstack Developer',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'sénégal',
   ],
 
-  authors: [{ name: 'Idrissa Wade', url: 'https://idrisswade.vercel.app' }],
+  authors: [{ name: 'Idrissa Wade', url: 'https://idrissawade.vercel.app' }],
   creator: 'Idrissa Wade',
 
   robots: {
@@ -46,11 +46,11 @@ export const metadata: Metadata = {
     title: 'Idy | Fullstack Developer',
     description:
       'Développeur Fullstack basé à Dakar, spécialisé en React, Next.js et Node.js.',
-    url: 'https://idrisswade.vercel.app',
+    url: 'https://idrissawade.vercel.app',
     siteName: 'Idy Portfolio',
     images: [
       {
-        url: 'https://idrisswade.vercel.app/og-image.png', // URL absolue pour Facebook
+        url: 'https://idrissawade.vercel.app/og-image.png', // URL absolue pour Facebook
         width: 1200,
         height: 630,
         alt: 'Idy - Fullstack Developer',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Idy | Fullstack Developer',
     description:
       'Développeur Fullstack spécialisé en React, Next.js et Node.js.',
-    images: ['https://idrisswade.vercel.app/og-image.png'], // URL absolue
+    images: ['https://idrissawade.vercel.app/og-image.png'], // URL absolue
     creator: '@theShvdow',
   },
 
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://idrisswade.vercel.app',
+    canonical: 'https://idrissawade.vercel.app',
   },
 }
 
