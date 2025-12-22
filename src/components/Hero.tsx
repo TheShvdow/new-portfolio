@@ -147,7 +147,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full pt-20">
         <p
           ref={subtitleRef}
           className="font-mono text-xs sm:text-sm text-accent tracking-[0.15em] sm:tracking-[0.3em] uppercase mb-4 md:mb-6 py-4 md:py-8"
