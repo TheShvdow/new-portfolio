@@ -9,33 +9,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    number: "01",
-    title: "GDR - Gestion des Retours (Private)",
-    description:
-      "Système de gestion des retours et déchets pour la Sonatel. Application complète permettant le suivi des équipements, la gestion des retours et l'optimisation des processus d'économie circulaire.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma"],
-    placeholder: "GDR",
-    image: "/gdr.png",
-    links: {
-      github: "#",
-    },
+    number: '01',
+    title: 'GDR - Gestion des Retours et Déchets',
+    description: `En tant que Développeur Fullstack et Product Owner chez Sonatel, j'ai conçu et développé de A à Z ce système stratégique pour la Direction Achats & Logistique. Face au défi de gérer des milliers d'équipements retournés chaque mois, j'ai créé une solution permettant de tracer chaque appareil et d'optimiser les processus de tri.`,
+    role: 'Fullstack Developer & Product Owner',
+    company: 'Sonatel',
+    duration: '6 mois',
+    impact: ['-40% de pertes', '3x plus rapide', '25+ utilisateurs'],
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker'],
+    placeholder: 'GDR',
+    image: '/gdr.png',
+    links: { github: '#' },
   },
   {
     number: "02",
-    title: "CRR - Centre de Reconditionnement (Private)",
-    description:
-      "Plateforme de gestion du centre de reconditionnement et réparation. Suivi des processus de réparation, gestion des techniciens et reporting avancé des performances.",
+    title: "CRR - Centre de Reconditionnement",
+    description: `Missionné pour digitaliser le centre de reconditionnement des équipements télécom chez Sonatel. J'ai développé une plateforme complète de suivi des réparations : diagnostic, pièces utilisées, technicien assigné, temps de traitement. Avec des dashboards temps réel pour identifier les goulots d'étranglement.`,
+    role: 'Fullstack Developer & Product Owner',
+    company: 'Sonatel',
+    duration: '4 mois',
+    impact: ['500+ réparations/mois', 'Dashboards temps réel', 'Réduction des coûts'],
     tech: ["React", "Express.js", "PostgreSQL", "Docker"],
     placeholder: "CRR",
     image: "/crr.png",
-    links: {
-      github: "#",
-    },
+    links: { github: "#" },
   },
   {
     number: "03",
-    title: "BorrBi - Gestion des dettes (Private)",
-    description:"Plateforme web complète de gestion des créances et dettes.Permet aux utilisateurs de suivre leurs emprunts, prêts et échéances de paiement.Tableau de bord analytique avec visualisation des flux financiers,rappels automatiques et génération de rapports.",
+    title: "BorrBi - Gestion des dettes",
+    description: `Projet personnel né d'un besoin réel : aider les gens à gérer leurs prêts et emprunts entre proches. Plateforme complète avec tableau de bord analytique, visualisation des flux financiers, rappels automatiques d'échéances et génération de rapports. Une solution simple pour un problème du quotidien.`,
+    role: 'Créateur & Lead Developer',
+    company: 'Projet Personnel',
+    duration: 'Live',
+    impact: ['Gestion simplifiée', 'Rappels automatiques', 'Rapports PDF'],
     tech: ['VueJS', 'Laravel', 'Neon', 'Prisma', 'Chart.js'],
     placeholder: '💰',
     image: "/borr-bi.png",
@@ -47,10 +53,14 @@ const projects = [
   {
     number: "04",
     title: "@theshvdow/create-express-app",
-    description:
-      "Package npm open-source pour initialiser rapidement des projets Node.js/Express avec une architecture propre, TypeScript configuré et les meilleures pratiques intégrées.",
+    description: `Frustré de reconfigurer Express.js à chaque projet, j'ai créé mon propre outil CLI et l'ai partagé avec la communauté. Ce package npm initialise un projet Node.js/Express en secondes avec TypeScript, ESLint et les meilleures pratiques. Ma première contribution open-source !`,
+    role: 'Créateur & Mainteneur',
+    company: 'Open Source',
+    duration: 'Live',
+    impact: ['Publié sur npm', 'Architecture propre', 'Gain de temps'],
     tech: ["Node.js", "npm", "TypeScript", "CLI"],
     placeholder: "📦",
+    image:"/express_api.png",
     links: {
       live: "https://www.npmjs.com/package/@theshvdow/create-express-app",
       github: "https://github.com/TheShvdow/express_package",
@@ -58,11 +68,15 @@ const projects = [
   },
   {
     number: "05",
-    title: "Découpage Senegal API",
-    description:
-      "API open-source documentant le decoupage adrministratif intégrale du Sénégal depuis les regions jusqu'aux communes en passant par les départements et ceux dans le but d'aider d'autres dévellopeurs à facilter l'accés à ces données qui etait jusque là difficile à avoir.",
+    title: "Découpage Sénégal API",
+    description: `API open-source documentant le découpage administratif intégral du Sénégal : régions, départements, arrondissements et communes. Un projet né de la difficulté à trouver ces données. Maintenant accessible à tous les développeurs sénégalais pour leurs applications locales.`,
+    role: 'Créateur & Lead Developer',
+    company: 'Open Source',
+    duration: 'Live',
+    impact: ['14 régions', '46 départements', '557 communes'],
     tech: ["AdonisJS", "Neon", "REST API"],
-    placeholder: "\u{1F1F8}\u{1F1F3}",
+    placeholder: "🇸🇳",
+    image: "/decoupage.png",
     links: {
       live: "https://decoupage-administratif-senagal.vercel.app/",
       github: "https://github.com/TheShvdow/decoupage_administratif_api",
@@ -103,7 +117,6 @@ export default function Projects() {
       const image = project.querySelector(".project-image");
       const content = project.querySelector(".project-content");
 
-      // Create timeline for each project
       const projectTl = gsap.timeline({
         scrollTrigger: {
           trigger: project,
@@ -112,7 +125,6 @@ export default function Projects() {
         },
       });
 
-      // Image slides from opposite direction
       projectTl.fromTo(
         image,
         {
@@ -129,7 +141,6 @@ export default function Projects() {
         }
       );
 
-      // Content slides from opposite direction with stagger
       projectTl.fromTo(
         content?.children || [],
         { x: isEven ? 100 : -100, opacity: 0 },
@@ -137,7 +148,6 @@ export default function Projects() {
         "-=0.8"
       );
 
-      // Parallax on scroll
       gsap.to(image, {
         y: -30,
         ease: "none",
@@ -177,52 +187,20 @@ export default function Projects() {
                 if (el) projectsRef.current[idx] = el;
               }}
               className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center ${
-                idx % 2 === 1 ? "lg:direction-rtl" : ""
+                idx % 2 === 1 ? "lg:flex-row-reverse lg:grid-flow-dense" : ""
               }`}
-              style={{ direction: idx % 2 === 1 ? "rtl" : "ltr" }}
             >
               {/* Image */}
-              <div
-                className="project-image relative group"
-                style={{ direction: "ltr" }}
-              >
-                <div
-                  className="
-                    relative
-                    rounded-2xl md:rounded-3xl
-                    overflow-hidden
-                    aspect-video
-                    bg-secondary
-                    border border-white/10
-                    transition-all duration-500
-                    group-hover:border-accent/30
-                    group-hover:shadow-[0_30px_60px_rgba(0,255,136,0.15)]
-                  "
-                >
-                  {/* PLACEHOLDER — TOUJOURS VISIBLE */}
-                  <div
-                    className="
-                      absolute inset-0
-                      flex items-center justify-center
-                      pointer-events-none
-                      z-0
-                    "
-                  >
-                    <span
-                      className="
-                      font-display
-                      text-[clamp(3rem,8vw,10rem)]
-                      font-extrabold
-                      text-white/10
-                      leading-none
-                      select-none
-                    "
-                                  >
+              <div className="project-image relative group">
+                <div className="relative rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-secondary border border-white/10 transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_30px_60px_rgba(0,255,136,0.15)]">
+                  {/* Placeholder */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                    <span className="font-display text-[clamp(3rem,8vw,10rem)] font-extrabold text-white/10 leading-none select-none">
                       {project.placeholder}
                     </span>
                   </div>
 
-                  {/* IMAGE */}
+                  {/* Image */}
                   {project.image && (
                     <Image
                       src={project.image}
@@ -230,47 +208,68 @@ export default function Projects() {
                       width={1200}
                       height={675}
                       priority={idx === 0}
-                      className="
-                      w-full h-full
-                      object-cover
-                      relative z-10
-                      scale-105
-                      transition-transform duration-[1200ms] ease-out
-                      group-hover:scale-110
-                    "
+                      className="w-full h-full object-cover relative z-10 scale-105 transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                     />
                   )}
 
-                  {/* CINEMATIC OVERLAY */}
-                  <div
-                    className="
-                      absolute inset-0
-                      bg-gradient-to-tr from-black/40 via-transparent to-black/20
-                      opacity-0
-                      group-hover:opacity-100
-                      transition-opacity duration-700
-                      z-20
-                    "
-                  />
+                  {/* Cinematic Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+
+                  {/* Company badge - INSIDE the image container */}
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-sm rounded-full px-2.5 md:px-4 py-1 md:py-2 flex items-center gap-1.5 md:gap-2 z-30">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-accent rounded-full animate-pulse" />
+                    <span className="font-mono text-[9px] md:text-xs text-white">
+                      {project.company}
+                    </span>
+                  </div>
+
+                  {/* Duration badge */}
+                  <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 bg-black/50 backdrop-blur-sm rounded-full px-2.5 md:px-4 py-1 md:py-2 z-30">
+                    <span className="font-mono text-[9px] md:text-xs text-accent">
+                      {project.duration}
+                    </span>
+                  </div>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="project-content" style={{ direction: "ltr" }}>
+              <div className="project-content">
+                {/* Number */}
                 <div
-                  className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent mb-3 md:mb-4"
+                  className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold text-transparent mb-2 md:mb-3"
                   style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
                 >
                   {project.number}
                 </div>
 
-                <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 tracking-tight">
+                {/* Role badge */}
+                <div className="inline-block bg-accent/10 border border-accent/30 rounded-full px-2.5 md:px-4 py-1 md:py-1.5 mb-3 md:mb-4">
+                  <span className="font-mono text-[9px] md:text-xs text-accent uppercase tracking-wider">
+                    {project.role}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="font-display text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 tracking-tight leading-tight">
                   {project.title}
                 </h3>
 
+                {/* Description */}
                 <p className="text-sm md:text-base text-[#888] leading-relaxed mb-4 md:mb-6">
                   {project.description}
                 </p>
+
+                {/* Impact */}
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                  {project.impact.map((item, i) => (
+                    <span
+                      key={i}
+                      className="px-2.5 md:px-3 py-1 md:py-1.5 bg-white/5 rounded-lg font-mono text-[10px] md:text-xs text-white/70"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
                 {/* Tech stack */}
                 <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
@@ -323,4 +322,4 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+} 
