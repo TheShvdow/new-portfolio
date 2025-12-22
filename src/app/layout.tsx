@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://idrisswade.vercel.app'), // 🔁 change avec ton vrai domaine
+  metadataBase: new URL('https://idrisswade.vercel.app'),
 
   title: {
     default: 'Idy | Fullstack Developer',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Idy Portfolio',
     images: [
       {
-        url: 'https://idrisswade.vercel.app/og-image.png', // à mettre dans /public
+        url: 'https://idrisswade.vercel.app/og-image.png', // URL absolue pour Facebook
         width: 1200,
         height: 630,
         alt: 'Idy - Fullstack Developer',
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
     title: 'Idy | Fullstack Developer',
     description:
       'Développeur Fullstack spécialisé en React, Next.js et Node.js.',
-    images: ['/og-image.png'],
-    creator: '@theShvdow', // optionnel
+    images: ['https://idrisswade.vercel.app/og-image.png'], // URL absolue
+    creator: '@theShvdow',
   },
 
   icons: {
