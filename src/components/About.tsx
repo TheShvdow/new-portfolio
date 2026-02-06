@@ -206,10 +206,10 @@ export default function About() {
               {/* TEXTE SUR IMAGE */}
               <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 z-[3]">
                 <p className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-accent mb-1">
-                  Fullstack Developer
+                  Freelance Fullstack Developer
                 </p>
                 <h3 className="font-display text-xl md:text-2xl font-bold text-white">
-                  Idriss Wade
+                  Idrissa Wade
                 </h3>
               </div>
 
