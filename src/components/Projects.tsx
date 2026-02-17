@@ -96,7 +96,7 @@ const projects = [
     image: "/krypto-shield.png",
     links: {
       live: "https://krypto-shield.netlify.app/",
-      github: "https://github.com/TheShvdow/krypto_shield",
+      github: "https://github.com/TheShvdow/kryptos-shield",
     },
   }
 ];
