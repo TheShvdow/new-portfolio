@@ -82,6 +82,23 @@ const projects = [
       github: "https://github.com/TheShvdow/decoupage_administratif_api",
     },
   },
+  {
+    number: "06",
+    title: "Krypto-Shield",
+    description: `Application de gestion de mots de passe sécurisée. Permet de stocker, générer et organiser les mots de passe de manière sécurisée. Interface intuitive avec des fonctionnalités avancées comme le chiffrement AES-256 et la génération aléatoire de mots de passe.
+    Krypto-Shield chiffre vos données avant qu'elles ne quittent votre appareil. Aucun serveur, aucun employé, aucun pirate ne peut y accéder.`,
+    role: 'Créateur & Lead Developer',
+    company: 'Projet Personnel',
+    duration: 'Live',
+    impact: ['Gestionnaire de mot de passe', 'Générateur de mots de passe', 'Stockage sécurisé','Chiffrement AES-256','Zero-knowledge'],
+    tech: ["React", "TypeScript", "Vite", "TailwindCSS", "shadcn/ui"],
+    placeholder: "🛡️",
+    image: "/krypto-shield.png",
+    links: {
+      live: "https://krypto-shield.netlify.app/",
+      github: "https://github.com/TheShvdow/krypto_shield",
+    },
+  }
 ];
 
 export default function Projects() {
