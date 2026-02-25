@@ -25,15 +25,15 @@ const socials = [
       </svg>
     ),
   },
-  // {
-  //   name: 'Twitter',
-  //   url: 'https://twitter.com/votre-profil',
-  //   icon: (
-  //     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-  //       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-  //     </svg>
-  //   ),
-  // },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/TheShvdowsn',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    ),
+  },
 ]
 
 export default function Contact() {
@@ -41,6 +41,7 @@ export default function Contact() {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const emailRef = useRef<HTMLAnchorElement>(null)
   const socialsRef = useRef<HTMLDivElement>(null)
+  const tellRef = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
     // Section slide in from bottom
@@ -88,6 +89,13 @@ export default function Contact() {
       '-=0.4'
     )
 
+    // Phone with magnetic effect
+    tl.fromTo(tellRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
+      '-=0.4'
+    )
+
     // Socials staggered
     tl.fromTo(socialsRef.current?.children || [],
       { y: 30, opacity: 0, scale: 0.8 },
@@ -107,6 +115,25 @@ export default function Contact() {
       })
       email.addEventListener('mouseleave', () => {
         gsap.to(email, {
+          scale: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+        })
+      })
+    }
+
+    // Phone hover effect
+    const tel = tellRef.current
+    if (tel) {
+      tel.addEventListener('mouseenter', () => {
+        gsap.to(tel, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: 'power2.out',
+        })
+      })
+      tel.addEventListener('mouseleave', () => {
+        gsap.to(tel, {
           scale: 1,
           duration: 0.3,
           ease: 'power2.out',
@@ -145,15 +172,27 @@ export default function Contact() {
           N&apos;hésitez pas à me contacter !
         </p>
 
+        <div className="flex flex-row justify-center gap-2 md:gap-3">
+
         <a
           ref={emailRef}
           href="mailto:derisswvde@gmail.com"
-          className="inline-block font-display text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold relative group magnetic break-all px-4"
+          className="inline-block font-display text-sm sm:text-base md:text-xl lg:text-2xl font-semibold relative group magnetic break-all px-4"
           data-cursor="Email"
         >
           <span className="relative z-10">derisswvde@gmail.com</span>
           <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
         </a>
+        <a
+          ref={tellRef}
+          href="tel:+221781556228"
+          className="inline-block font-display text-sm sm:text-base md:text-xl lg:text-2xl font-semibold relative group magnetic break-all px-4"
+          data-cursor="Phone"
+        >
+          <span className="relative z-10">(+221) 78 155 62 28</span>
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+        </a>
+        </div>
 
         {/* Socials */}
         <div ref={socialsRef} className="flex justify-center gap-4 md:gap-5 mt-10 md:mt-14">

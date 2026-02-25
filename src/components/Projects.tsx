@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { title } from "node:process";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +48,7 @@ const projects = [
     image: "/borr-bi.png",
     links: {
       github: "#",
-      live: "https://borr-bi.vercel.app/"
+      live: "https://borr-bi-lp.vercel.app/"
     },
   },
   {
@@ -92,13 +93,45 @@ const projects = [
     duration: 'Live',
     impact: ['Gestionnaire de mot de passe', 'Générateur de mots de passe', 'Stockage sécurisé','Chiffrement AES-256','Zero-knowledge'],
     tech: ["React", "TypeScript", "Vite", "TailwindCSS", "shadcn/ui"],
-    placeholder: "🛡️",
+      placeholder: "🛡️",
     image: "/krypto-shield.png",
     links: {
       live: "https://krypto-shield.netlify.app/",
       github: "#",
     },
-  }
+  },
+  {
+    number: "07",
+    title: "Sama Ecole",
+    description: `Application de gestion scolaire pour une école coranique. Permet de gérer les inscriptions, les présences, les paiements et la génération de factures. Conçue pour être simple et efficace, elle facilite la vie des administrateurs et des enseignants tout en offrant une expérience utilisateur fluide en ligne et en offline grace une base de données locale synchronisée avec le cloud. Un projet réalisé en seulement 3 semaines pour répondre à un besoin urgent.`,
+    role: 'Développeur Fullstack Freelance',
+    company: 'Institut Islamique Seydina Mouhamed (PSL)',
+    duration: '3 weeks',
+    impact: ['Gestion des inscriptions', 'Gestion des présences', 'Enregistrement paiements', 'Generation de factures', 'Comptabilité'],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Neon"],
+    placeholder: "🏫",
+    image: "/school.png",
+    links: {
+      live: "#",
+      github: "#",
+    },
+  },
+  {
+    number:"08",
+    title: "Le Saint Coran",
+    description: `Application de lecture du Coran avec des fonctionnalités avancées : recherche par mots-clés, signets, et mode nuit. Conçue pour offrir une expérience de lecture fluide et agréable, elle permet aux utilisateurs lire le livre sans publicite et sans compte avec la possibilité de lire en offline. Un projet personnel pour partager la beauté du Coran de manière moderne.`, 
+    role: 'Créateur & Lead Developer',
+    company: 'Projet Personnel',
+    duration: 'Live',
+    impact: ['Lecture du Coran', 'Recherche par mots-clés', 'Signets', 'Mode nuit', 'Lecture offline'],
+    tech: ["flutter", "TypeScript"],
+    placeholder: "📖",
+    image: "/coran.png",
+    links: {
+      live: "https://holyquran-app.netlify.app/",
+      github: "#",
+    }
+  },
 ];
 
 export default function Projects() {
