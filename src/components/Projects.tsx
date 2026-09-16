@@ -96,7 +96,7 @@ const projects = [
       placeholder: "🛡️",
     image: "/krypto-shield.png",
     links: {
-      live: "https://krypto-shield.netlify.app/",
+      live: "https://kryptos-shield.vercel.app/",
       github: "#",
     },
   },
@@ -118,8 +118,8 @@ const projects = [
   },
   {
     number:"08",
-    title: "Le Saint Coran",
-    description: `Application de lecture du Coran avec des fonctionnalités avancées : recherche par mots-clés, signets, et mode nuit. Conçue pour offrir une expérience de lecture fluide et agréable, elle permet aux utilisateurs lire le livre sans publicite et sans compte avec la possibilité de lire en offline. Un projet personnel pour partager la beauté du Coran de manière moderne.`, 
+    title: "Iqra - Quran Karim",
+    description: `Application de lecture du Coran avec des fonctionnalités avancées : recherche par mots-clés, signets, et mode nuit. Conçue pour offrir une expérience de lecture fluide et agréable, elle permet aux utilisateurs lire le livre sans publicite et sans compte avec la possibilité de lire en offline. Un projet personnel pour partager la beauté du Coran de manière moderne.`,
     role: 'Créateur & Lead Developer',
     company: 'Projet Personnel',
     duration: 'Live',
@@ -128,7 +128,7 @@ const projects = [
     placeholder: "📖",
     image: "/coran.png",
     links: {
-      live: "https://holyquran-app.netlify.app/",
+      live: "https://iqra-qurankarim.netlify.app/",
       github: "#",
     }
   },
